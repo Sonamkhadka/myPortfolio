@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #0a192f;
+    --text-color: #8892b0;
+    --highlight-color: #64ffda;
+    --secondary-color: #112240;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.glitch {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--highlight-color);
+    letter-spacing: 0.5rem;
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px,0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: var(--bg-color);
+    clip: rect(0, 0, 0, 0);
+}
+
+.glitch:before {
+    left: -2px;
+    text-shadow: 2px 0 #ff00c1;
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+    left: 2px;
+    text-shadow: -2px 0 #00fff9;
+    animation: glitch-anim 2s infinite linear alternate;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(64px, 9999px, 66px, 0);
+    }
+    5% {
+        clip: rect(30px, 9999px, 36px, 0);
+    }
+    10% {
+        clip: rect(87px, 9999px, 95px, 0);
+    }
+    15% {
+        clip: rect(55px, 9999px, 62px, 0);
+    }
+    20% {
+        clip: rect(28px, 9999px, 31px, 0);
+    }
+    25% {
+        clip: rect(63px, 9999px, 69px, 0);
+    }
+    30% {
+        clip: rect(92px, 9999px, 95px, 0);
+    }
+    35% {
+        clip: rect(49px, 9999px, 54px, 0);
+    }
+    40% {
+        clip: rect(45px, 9999px, 50px, 0);
+    }
+    45% {
+        clip: rect(3px, 9999px, 9px, 0);
+    }
+    50% {
+        clip: rect(42px, 9999px, 44px, 0);
+    }
+    55% {
+        clip: rect(31px, 9999px, 37px, 0);
+    }
+    60% {
+        clip: rect(86px, 9999px, 91px, 0);
+    }
+    65% {
+        clip: rect(1px, 9999px, 4px, 0);
+    }
+    70% {
+        clip: rect(73px, 9999px, 76px, 0);
+    }
+    75% {
+        clip: rect(15px, 9999px, 18px, 0);
+    }
+    80% {
+        clip: rect(67px, 9999px, 70px, 0);
+    }
+    85% {
+        clip: rect(25px, 9999px, 31px, 0);
+    }
+    90% {
+        clip: rect(89px, 9999px, 98px, 0);
+    }
+    95% {
+        clip: rect(50px, 9999px, 53px, 0);
+    }
+    100% {
+        clip: rect(53px, 9999px, 58px, 0);
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    color: var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 0.5rem;
+}
+
+#skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skill-display {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#skill-shuffle {
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#skill-shuffle:hover {
+    background-color: var(--text-color);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonam Khadka - Interactive Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="Sonam Khadka">Sonam Khadka</h1>
+            <p class="subtitle">IT Student | Student Support Coordinator | Professional Photographer</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>Dedicated IT student and Student Support Coordinator with over 6 years of experience in a VET college. Currently pursuing a Bachelor of Information Technology at Queensland University of Technology with a strong academic record. Proficient in Python programming and various IT systems. Highly organised, effective in fast-paced environments, and committed to continuous learning and growth in the technology field.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Information Technology</h3>
+                <p>Queensland University of Technology, Brisbane</p>
+                <p>FEBRUARY 2024 - PRESENT</p>
+                <p>GPA: 6.000 (as of 11-Aug-2024)</p>
+                <table>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Title</th>
+                        <th>Mark</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>IFB102</td>
+                        <td>Introduction to Computer Systems</td>
+                        <td>91.5</td>
+                        <td>7 (High Distinction)</td>
+                    </tr>
+                    <tr>
+                        <td>IFB103</td>
+                        <td>IT Systems Design</td>
+                        <td>82</td>
+                        <td>6 (Distinction)</td>
+                    </tr>
+                    <tr>
+                        <td>IFB104</td>
+                        <td>Building IT Systems</td>
+                        <td>99</td>
+                        <td>7 (High Distinction)</td>
+                    </tr>
+                    <tr>
+                        <td>IFB240</td>
+                        <td>Cyber Security</td>
+                        <td>64</td>
+                        <td>4 (Pass)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="education-item">
+                <h3>Diploma of Information Technology</h3>
+                <p>Australia Institute of Business and Technology, Upper Mount Gravatt</p>
+                <p>AUGUST 2022 - OCTOBER 2023</p>
+            </div>
+            <div class="education-item">
+                <h3>Certificate III in Remote Pilot (Visual Line of Sight)</h3>
+                <p>Australia Institute of Business and Technology, Upper Mount Gravatt</p>
+                <p>JANUARY 2017 - JULY 2017</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Student Support Coordinator</h3>
+                <p>Australia Institute of Business and Technology, Upper Mount Gravatt</p>
+                <p>APRIL 2018 - PRESENT</p>
+                <ul>
+                    <li>Lead and manage a team of support staff in a fast-paced educational environment</li>
+                    <li>Handle various IT-related tasks, including managing application portals and troubleshooting technical issues</li>
+                    <li>Provide academic and personal counseling to students, supporting their educational journey</li>
+                    <li>Implement efficient organizational systems to manage large workloads and meet deadlines</li>
+                    <li>Collaborate with diverse teams to solve complex problems and improve student services</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Professional Photographer</h3>
+                <p>Sonam's Photography, Queensland</p>
+                <p>JANUARY 2018 - PRESENT</p>
+                <ul>
+                    <li>Operate as a freelance photographer, managing client relationships and project deliveries</li>
+                    <li>Apply technical skills in photography and image editing to produce high-quality visual content</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skill-container">
+                <div id="skill-display"></div>
+                <button id="skill-shuffle">Shuffle Skills</button>
+            </div>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Programming Languages: Python (IFB104 course)</li>
+                <li>IT Systems: Experience with various application portals and IT infrastructure</li>
+                <li>Microsoft Office Suite: Proficient in Word, Excel, PowerPoint</li>
+                <li>Data Entry: Accurate and efficient data management</li>
+                <li>Photography: Professional-level skills in digital photography and editing</li>
+            </ul>
+            <h3>Additional Skills</h3>
+            <ul>
+                <li>Customer Service: Extensive experience in student support and client relations</li>
+                <li>Management: Team leadership and project coordination</li>
+                <li>Languages: Fluent in English and Nepalese</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Address: Unit 12, 60 Gawler Cresent, Bracken Ridge, 4017</p>
+            <p>Phone: 61416980072</p>
+            <p>Email: sonamkhadka2@gmail.com</p>
+            <p>LinkedIn: [Your LinkedIn profile URL]</p>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
